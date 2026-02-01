@@ -1,0 +1,14 @@
+<svg width="260" height="200" xmlns="http://www.w3.org/2000/svg" aria-label="Tech monogram DB logo">
+  <polygon points="130,10 220,60 220,150 130,190 40,150 40,60" 
+           fill="#0a0a0a" 
+           stroke="#00eaff" 
+           stroke-width="3"/>
+  <text x="130" y="120" 
+        font-size="70" 
+        font-family="Arial, sans-serif" 
+        fill="#00eaff" 
+        text-anchor="middle"
+        font-weight="bold">
+    DB
+  </text>
+</svg>

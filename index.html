@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dipesh Bastakoti - Computer Science Student Portfolio | Web Development & Programming Projects">
+    <title>Dipesh Bastakoti - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div id="top" class="header-left">
+    <img src="Image/DB_logo.svg" alt="DB personal logo" class="logo">
+    <div class="logo-text">Dipesh Bastakoti</div>
+  </div>
+
+  <button class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="main-nav" id="mainNav">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="my_detail">
+    <img src="Image/profile.png" alt="Dipesh Bastakoti wearing a white jacket" class="photo1">
+    <div class="detail_txt">
+      <h1 class="heading1">Hi, I'm Dipesh Bastakoti</h1>
+      <p>Originally from Nepal, I'm currently pursuing my bachelor's degree in Intelligence Computing at Dong Eui University in Busan, Korea. I completed my high school in 2023 at NIST College, Nepal. I'm deeply interested in technology and love exploring new advancements in web development and programming.</p>
+      <a href="projects.html" class="button">View my projects →</a>
+    </div>
+  </section>
+
+  <section id="about" class="about clearfix">
+    <h2 class="h2about">About me</h2>
+    <div class="column">
+      <p>
+        I am a student at Dong-Eui University, currently studying Intelligence Computing.
+        I'm interested in web development, UI design, and practical problem solving.
+      </p>
+    </div>
+    <div class="column">
+      <p>
+        I work with HTML, CSS, and C programming, and I'm gradually adding
+        more projects to this portfolio as I learn and grow my skills.
+      </p>
+    </div>
+  </section>
+
+  <button class="topbutton" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ TO THE TOP</button>
+</main>
+
+<footer>
+  <p>&copy; <time datetime="2025">2025</time> Bastakoti Dipesh. All Rights Reserved.</p>
+</footer>
+
+<script>
+  // Mobile menu toggle function
+  function toggleMenu() {
+    const nav = document.getElementById('mainNav');
+    const toggle = document.querySelector('.menu-toggle');
+    const isActive = nav.classList.contains('active');
+    
+    if (isActive) {
+      nav.classList.remove('active');
+      toggle.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    } else {
+      nav.classList.add('active');
+      toggle.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  // Close menu when clicking a link
+  document.querySelectorAll('.main-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      const nav = document.getElementById('mainNav');
+      const toggle = document.querySelector('.menu-toggle');
+      nav.classList.remove('active');
+      toggle.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+  });
+
+  // Close menu when clicking outside (on the overlay)
+  document.addEventListener('click', (e) => {
+    const nav = document.getElementById('mainNav');
+    const toggle = document.querySelector('.menu-toggle');
+    const isClickInsideNav = nav.contains(e.target);
+    const isClickOnToggle = toggle.contains(e.target);
+    
+    if (!isClickInsideNav && !isClickOnToggle && nav.classList.contains('active')) {
+      nav.classList.remove('active');
+      toggle.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  });
+
+  // Smooth scroll for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href !== '#' && href.length > 1) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>

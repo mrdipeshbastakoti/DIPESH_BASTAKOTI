@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dipesh Bastakoti's Projects - Web Development and Programming Portfolio">
+    <title>Projects - Dipesh Bastakoti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="header-left">
+    <img src="Image/DB_logo.svg" alt="DB personal logo" class="logo">
+    <div class="logo-text">Dipesh Bastakoti</div>
+  </div>
+
+  <button class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="main-nav" id="mainNav">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+      </ul>
+  </nav>
+</header>  
+
+<main>
+  <div class="project_header">
+    <h1>My Projects</h1>
+    <p>Small things I have built while learning web development and programming.</p>
+  </div>
+
+  <section class="project-list">
+    <h2 class="visually-hidden">Project List</h2>
+    
+    <article class="project">
+      <h2>Student Record Management System (C)</h2>
+      <p>
+        A command-line based program written in C that can store, search, and update student information using structures and file handling. 
+        This was part of my academic practical work and demonstrates my ability to work with data structures and program logic in C.
+      </p>
+      <p><strong>ID:</strong> 20244136 • <strong>Developer:</strong> Dipesh Bastakoti</p>
+    </article>
+
+    <article class="project">
+      <h2>Web Interface Designed Using HTML &amp; CSS</h2>
+      <p>
+        A front-end interface designed with semantic HTML elements and modern CSS styling. 
+        This project focused on layout, typography, color palettes, and responsive design principles to create a clean and usable UI.
+      </p>
+      <p><strong>Role:</strong> Designer &amp; Front-end Developer</p>
+    </article>
+
+    <article class="project">
+      <h2>Personal Portfolio Website</h2>
+      <p>
+        A personal website built to showcase my skills, projects, and academic journey. 
+        This site features multiple pages, internal navigation, image assets, and validation against web standards.
+      </p>
+      <p><strong>Created by:</strong> Dipesh Bastakoti • <strong>ID:</strong> 20244136</p>
+      <a href="https://dipeshbastakoti.com.np" target="_blank" rel="noopener noreferrer">
+        Visit My Website →
+      </a>
+    </article>
+  </section>
+
+  <section class="myskill">
+    <h2>Skills Overview</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Skill</th>
+          <th scope="col">Level</th>
+          <th scope="col">Experience</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">HTML &amp; CSS</th>
+          <td>Intermediate</td>
+          <td rowspan="2">Built multiple class projects, including this portfolio and a custom web interface.</td>
+        </tr>
+        <tr>
+          <th scope="row">C Programming</th>
+          <td>Intermediate</td>
+        </tr>
+        <tr>
+          <th scope="row">Python</th>
+          <td>Intermediate</td>
+          <td>Done some projects in my university with my friends</td>
+        </tr>
+        <tr>
+          <th scope="row">Soft Skills</th>
+          <td colspan="2">Teamwork, communication skills, and problem solving</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; <time datetime="2025">2025</time> Bastakoti Dipesh. All Rights Reserved.</p>
+</footer>
+
+<script>
+  // Mobile menu toggle function
+  function toggleMenu() {
+    const nav = document.getElementById('mainNav');
+    const toggle = document.querySelector('.menu-toggle');
+    const isActive = nav.classList.contains('active');
+    
+    if (isActive) {
+      nav.classList.remove('active');
+      toggle.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    } else {
+      nav.classList.add('active');
+      toggle.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  // Close menu when clicking a link
+  document.querySelectorAll('.main-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      const nav = document.getElementById('mainNav');
+      const toggle = document.querySelector('.menu-toggle');
+      nav.classList.remove('active');
+      toggle.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+  });
+
+  // Close menu when clicking outside (on the overlay)
+  document.addEventListener('click', (e) => {
+    const nav = document.getElementById('mainNav');
+    const toggle = document.querySelector('.menu-toggle');
+    const isClickInsideNav = nav.contains(e.target);
+    const isClickOnToggle = toggle.contains(e.target);
+    
+    if (!isClickInsideNav && !isClickOnToggle && nav.classList.contains('active')) {
+      nav.classList.remove('active');
+      toggle.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  });
+</script>
+</body>
+</html>
