@@ -38,20 +38,20 @@
   <section class="contact-info clearfix">
     <div class="column">
       <h2>Contact Information</h2>
-      <p><strong>Email:</strong> <a href="mailto:bastakotidipesh123@gmail.com">bastakotidipesh123@gmail.com</a></p>
+      <p><strong>Email:</strong> <a href="mailto:jrdipeshbastakoti@gmail.com">jrdipeshbastakoti@gmail.com</a></p>
       <p><strong>Location:</strong> Busan, South Korea</p>
     </div>
 
     <div class="column">
       <h2>Quick message</h2>
-      <form>
+      <form action="https://formsubmit.co/jrdipeshbastakoti@gmail.com" method="POST">\n        <input type="hidden" name="_subject" value="New message from dipeshbastakoti.com.np">\n        <input type="hidden" name="_template" value="table">\n        <input type="hidden" name="_next" value="https://www.dipeshbastakoti.com.np/contact.html?sent=true">\n        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
         <label for="name">Name</label>
         <input id="name" name="name" type="text" placeholder="Your name" required>
 
-        <label for="message">Message</label>
+        <label for="email">Email</label>\n        <input id="email" name="email" type="email" placeholder="Your email" required>\n\n        <label for="message">Message</label>
         <textarea id="message" name="message" rows="4" placeholder="Your message here..." required></textarea>
 
-        <button type="submit">Send Message</button>
+        <button type="submit">Send Message</button>\n        <p id="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
   </section>
@@ -119,6 +119,6 @@
       document.body.style.overflow = 'auto';
     }
   });
-</script>
+\n  if (new URLSearchParams(window.location.search).get('sent') === 'true') {\n    const status = document.getElementById('form-status');\n    if (status) status.textContent = 'Thank you! Your message has been sent.';\n  }\n</script>
 </body>
 </html>
