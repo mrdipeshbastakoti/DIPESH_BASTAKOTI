@@ -44,14 +44,23 @@
 
     <div class="column">
       <h2>Quick message</h2>
-      <form action="https://formsubmit.co/jrdipeshbastakoti@gmail.com" method="POST">\n        <input type="hidden" name="_subject" value="New message from dipeshbastakoti.com.np">\n        <input type="hidden" name="_template" value="table">\n        <input type="hidden" name="_next" value="https://www.dipeshbastakoti.com.np/contact.html?sent=true">\n        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
+      <form action="https://formsubmit.co/jrdipeshbastakoti@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New message from dipeshbastakoti.com.np">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://www.dipeshbastakoti.com.np/contact.html?sent=true">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
+
         <label for="name">Name</label>
         <input id="name" name="name" type="text" placeholder="Your name" required>
 
-        <label for="email">Email</label>\n        <input id="email" name="email" type="email" placeholder="Your email" required>\n\n        <label for="message">Message</label>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="Your email" required>
+
+        <label for="message">Message</label>
         <textarea id="message" name="message" rows="4" placeholder="Your message here..." required></textarea>
 
-        <button type="submit">Send Message</button>\n        <p id="form-status" role="status" aria-live="polite"></p>
+        <button type="submit">Send Message</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
   </section>
@@ -119,6 +128,11 @@
       document.body.style.overflow = 'auto';
     }
   });
-\n  if (new URLSearchParams(window.location.search).get('sent') === 'true') {\n    const status = document.getElementById('form-status');\n    if (status) status.textContent = 'Thank you! Your message has been sent.';\n  }\n</script>
+
+  if (new URLSearchParams(window.location.search).get('sent') === 'true') {
+    const status = document.getElementById('form-status');
+    if (status) status.textContent = 'Thank you! Your message has been sent.';
+  }
+</script>
 </body>
 </html>
