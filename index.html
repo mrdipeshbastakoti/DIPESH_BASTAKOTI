@@ -1,132 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dipesh Bastakoti - Computer Science Student Portfolio | Web Development & Programming Projects">
-    <title>Dipesh Bastakoti - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Dipesh Bastakoti — Intelligence Computing student, developer, photographer and brewing learner based in Busan.">
+  <meta name="theme-color" content="#101c18">
+  <title>Dipesh Bastakoti — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
 </head>
 <body>
-<header>
-  <div id="top" class="header-left">
-    <img src="Image/DB_logo.svg" alt="DB personal logo" class="logo">
-    <div class="logo-text">Dipesh Bastakoti</div>
-  </div>
-
-  <button class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <nav class="main-nav" id="mainNav">
-      <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="#about">About</a></li>
-      </ul>
-  </nav>
-</header>
-
-<main>
-  <section class="my_detail">
-    <img src="Image/profile.png" alt="Dipesh Bastakoti wearing a white jacket" class="photo1">
-    <div class="detail_txt">
-      <h1 class="heading1">Hi, I'm Dipesh Bastakoti</h1>
-      <p>Originally from Nepal, I'm currently pursuing my bachelor's degree in Intelligence Computing at Dong Eui University in Busan, Korea. I completed my high school in 2023 at NIST College, Nepal. I'm deeply interested in technology and love exploring new advancements in web development and programming.</p>
-      <a href="projects.html" class="button">View my projects →</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Dipesh Bastakoti, home">
+      <span class="brand-mark">DB</span><span>Dipesh Bastakoti</span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="#about" data-i18n="navAbout">About</a>
+      <a href="#journey" data-i18n="navJourney">Journey</a>
+      <a href="#projects" data-i18n="navProjects">Projects</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="theme-toggle" aria-label="Switch color theme">◐</button>
+      <button class="language-toggle" id="language-toggle" aria-label="Switch language">한국어</button>
     </div>
-  </section>
+  </header>
 
-  <section id="about" class="about clearfix">
-    <h2 class="h2about">About me</h2>
-    <div class="column">
-      <p>
-        I am a student at Dong-Eui University, currently studying Intelligence Computing.
-        I'm interested in web development, UI design, and practical problem solving.
-      </p>
-    </div>
-    <div class="column">
-     <p>
-I am an aspiring developer with a strong interest in web and software development.<br><br>
+  <main id="main">
+    <section class="hero section" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow" data-i18n="heroEyebrow">Nepal → Busan, South Korea</p>
+        <h1 data-i18n="heroTitle">Learning technology.<br><em>Building a bigger story.</em></h1>
+        <p class="hero-lead" data-i18n="heroLead">I’m Dipesh—an Intelligence Computing student, aspiring developer, photographer and hands-on brewing learner.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects" data-i18n="viewWork">Explore my work</a>
+          <a class="button secondary" href="#contact" data-i18n="talk">Let’s talk</a>
+        </div>
+        <ul class="quick-facts" aria-label="Quick facts">
+          <li><strong>Busan</strong><span data-i18n="basedIn">Based in Korea</span></li>
+          <li><strong>ICT</strong><span data-i18n="studying">Studying & building</span></li>
+          <li><strong>Craft</strong><span data-i18n="learning">Learning by doing</span></li>
+        </ul>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="portrait-wrap">
+          <div class="portrait-halo" aria-hidden="true"></div>
+          <img src="Image/profile.png" alt="Portrait of Dipesh Bastakoti" width="450" height="554">
+          <span class="floating-note note-one">Code / 코드</span>
+          <span class="floating-note note-two">Beer / 맥주</span>
+          <span class="floating-note note-three">Frames / 사진</span>
+        </div>
+      </div>
+    </section>
 
-I have experience working with HTML, CSS, and PHP to build simple and responsive websites.<br>
-I am at an intermediate level in Python and also have  knowledge of C and C++ programming.<br><br>
+    <section class="section about" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="aboutEyebrow">More than one path</p>
+        <h2 data-i18n="aboutTitle">Curiosity connects everything I do.</h2>
+      </div>
+      <div class="about-grid">
+        <article class="about-story reveal">
+          <p data-i18n="aboutP1">I’m originally from Nepal and currently study Intelligence Computing at Dong-Eui University in Busan. I enjoy turning ideas into useful, thoughtful digital experiences.</p>
+          <p data-i18n="aboutP2">Outside the classroom, I work in craft beer, explore Korea with a camera, and keep learning through real projects. Long term, I want to connect the experience I gain in Korea with an independent venture in Nepal.</p>
+        </article>
+        <div class="skill-cloud reveal" aria-label="Skills and interests">
+          <span>HTML & CSS</span><span>JavaScript</span><span>Python</span><span>C / C++</span><span>UI Design</span><span>Photography</span><span>Brewing</span><span>Korean</span>
+        </div>
+      </div>
+    </section>
 
-I understand fundamental concepts of Object-Oriented Programming (OOP) and basic Data Structures.<br>
-Currently, I am working on projects to improve my skills and will be adding them to my portfolio soon.
-</p>
-    </div>
-  </section>
+    <section class="section journey" id="journey">
+      <div class="section-heading reveal"><p class="eyebrow" data-i18n="journeyEyebrow">My journey</p><h2 data-i18n="journeyTitle">Learning across worlds.</h2></div>
+      <div class="journey-grid">
+        <article class="journey-card reveal"><span>01</span><h3 data-i18n="studyTitle">Intelligence Computing</h3><p data-i18n="studyText">Building foundations in programming, web development, logic and practical problem solving at Dong-Eui University.</p></article>
+        <article class="journey-card reveal"><span>02</span><h3 data-i18n="brewTitle">Craft beer</h3><p data-i18n="brewText">Learning real brewery and taproom operations in Busan—from service and marketing to canning, kegging and brewing support.</p></article>
+        <article class="journey-card reveal"><span>03</span><h3 data-i18n="photoTitle">Stories through a lens</h3><p data-i18n="photoText">Capturing travel, daily life and the atmosphere of places through photography and natural video.</p></article>
+      </div>
+    </section>
 
-  <button class="topbutton" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ TO THE TOP</button>
-</main>
+    <section class="section projects" id="projects">
+      <div class="section-heading reveal"><p class="eyebrow" data-i18n="projectsEyebrow">Selected work</p><h2 data-i18n="projectsTitle">Projects that show the process.</h2></div>
+      <div class="project-filters reveal" role="group" aria-label="Filter projects">
+        <button class="filter active" data-filter="all" data-i18n="all">All</button>
+        <button class="filter" data-filter="web">Web</button>
+        <button class="filter" data-filter="programming" data-i18n="programming">Programming</button>
+        <button class="filter" data-filter="creative" data-i18n="creative">Creative</button>
+      </div>
+      <div class="project-grid" id="project-grid" aria-live="polite"></div>
+    </section>
 
-<footer>
-  <p>&copy; <time datetime="2026">2026</time> Bastakoti Dipesh. All Rights Reserved.</p>
-</footer>
+    <section class="section contact" id="contact">
+      <div class="contact-card reveal">
+        <div><p class="eyebrow" data-i18n="contactEyebrow">Start a conversation</p><h2 data-i18n="contactTitle">Have an idea, opportunity or just want to say hello?</h2><p data-i18n="contactText">I’m open to learning, collaboration and thoughtful conversations.</p></div>
+        <form id="contact-form">
+          <label for="name" data-i18n="name">Name</label><input id="name" name="name" autocomplete="name" required>
+          <label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required>
+          <label for="message" data-i18n="message">Message</label><textarea id="message" name="message" rows="4" required></textarea>
+          <button class="button primary" type="submit" data-i18n="send">Write an email</button>
+          <p class="form-note" data-i18n="formNote">This opens your email app so you stay in control of what is sent.</p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-<script>
-  // Mobile menu toggle function
-  function toggleMenu() {
-    const nav = document.getElementById('mainNav');
-    const toggle = document.querySelector('.menu-toggle');
-    const isActive = nav.classList.contains('active');
-    
-    if (isActive) {
-      nav.classList.remove('active');
-      toggle.classList.remove('active');
-      document.body.style.overflow = 'auto';
-    } else {
-      nav.classList.add('active');
-      toggle.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-  }
-
-  // Close menu when clicking a link
-  document.querySelectorAll('.main-nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      const nav = document.getElementById('mainNav');
-      const toggle = document.querySelector('.menu-toggle');
-      nav.classList.remove('active');
-      toggle.classList.remove('active');
-      document.body.style.overflow = 'auto';
-    });
-  });
-
-  // Close menu when clicking outside (on the overlay)
-  document.addEventListener('click', (e) => {
-    const nav = document.getElementById('mainNav');
-    const toggle = document.querySelector('.menu-toggle');
-    const isClickInsideNav = nav.contains(e.target);
-    const isClickOnToggle = toggle.contains(e.target);
-    
-    if (!isClickInsideNav && !isClickOnToggle && nav.classList.contains('active')) {
-      nav.classList.remove('active');
-      toggle.classList.remove('active');
-      document.body.style.overflow = 'auto';
-    }
-  });
-
-  // Smooth scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if (href !== '#' && href.length > 1) {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      }
-    });
-  });
-</script>
+  <footer>
+    <p>© <span id="year"></span> Dipesh Bastakoti</p>
+    <div><a href="https://github.com/mrdipeshbastakoti" target="_blank" rel="noopener">GitHub</a><a href="https://www.instagram.com/dipeshbastakoti/" target="_blank" rel="noopener">Instagram</a></div>
+  </footer>
 </body>
 </html>
