@@ -1,0 +1,2 @@
+const menuButton=document.querySelector('.menu-button');const nav=document.querySelector('#nav');menuButton.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open))});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false')}));
+// When the portfolio gets a backend, this greeting can be personalized using the visitor's local time.
