@@ -1,0 +1,2 @@
+const button=document.querySelector('.menu-button');const nav=document.querySelector('.nav');button.addEventListener('click',()=>{const open=nav.classList.toggle('nav-open');button.setAttribute('aria-expanded',String(open))});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('nav-open');button.setAttribute('aria-expanded','false')}));
+// Future backend: personalize the greeting with the visitor's local time.
